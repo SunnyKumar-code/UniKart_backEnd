@@ -30,4 +30,12 @@ const orderItemSchema = new mongoose.Schema({
     type: Number,
     required: true
   }
-});
+},{_id:false});
+
+const orderSchema = new mongoose.Schema({
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"User",
+        
+    }
+})
